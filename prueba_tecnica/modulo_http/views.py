@@ -4,7 +4,7 @@ import requests
 def getRespuesta(request):
     try:
         # Obtenemos el dominio al que realizar la petición GET que se pasa como parámetro en la URL.
-        domain = 'http://' + request.GET['dominio']
+        domain = 'http://' + (request.GET.get('ip', False) or request.GET['dominio'])
         # Hacemos la petición a este dominio, para así obtener respuesta y devolver el código HTTP obtenido
         # y el tiempo transcurrido entre la petición y la respuesta.
         # Con allow_redirects=false evitamos que el módulo requests haga una redirección automática si la petición
