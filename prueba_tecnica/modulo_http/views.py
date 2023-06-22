@@ -1,4 +1,4 @@
-from django.http import JsonResponse, HttpResponseBadRequest
+from django.http import JsonResponse, HttpResponseNotFound
 import requests
 
 def getRespuesta(request):
@@ -13,7 +13,7 @@ def getRespuesta(request):
     except:
         # Si hubiera algún error, bien a la hora de obtener los parámetros de la URL o al hacer la petición,
         # generamos como respuesta un mensaje HTTP con código 400 por defecto.
-        return HttpResponseBadRequest()
+        return HttpResponseNotFound()
     
     # Se devuelve el resultado de la petición si todo ha salido bien.
     return JsonResponse({
