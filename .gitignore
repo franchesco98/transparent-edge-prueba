@@ -1,0 +1,12 @@
+# Ignorar todos los archivos y carpetas
+*
+# Excepto la carpeta del proyecto de Django
+!/prueba_tecnica
+!/prueba_tecnica/**
+# El archivo requirements.txt para instalar dependencias
+!/requirements.txt
+# Y, por supuesto, excepto también el .gitignore
+!.gitignore
+# Ignrorar también archivos de bases de datos y carpetas con archivos de Python compilados
+*.sqlite3
+__pycache__
