@@ -10,3 +10,5 @@
 # Ignrorar también archivos de bases de datos y carpetas con archivos de Python compilados
 *.sqlite3
 __pycache__
+# No ignorar además el README.md
+!README.md
